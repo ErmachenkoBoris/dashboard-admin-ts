@@ -1,0 +1,11 @@
+@import "src/app/styles/styles";
+@import "src/app/modules/admin-dashboard/styles/admin.list.scss";
+
+@include mat-table-columns((
+  position: (width: 5%, color: $color-gray-3),
+  subDomain: (width: 25%),
+  domain: (width: 25%, color: $color-gray-3),
+  status: (width: 25%),
+  actions: (width: 15%, color: $color-gray-3),
+));
+

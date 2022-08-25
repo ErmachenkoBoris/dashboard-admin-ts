@@ -1,0 +1,14 @@
+@import "src/app/styles/styles";
+
+.tsd-loader {
+  z-index: 1001;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: gray;
+  opacity: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

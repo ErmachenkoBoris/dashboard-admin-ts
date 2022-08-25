@@ -1,0 +1,18 @@
+[
+  { "position": 1, "subDomain": "Hydrogen", "domain": "1.0079", "status": 1 },
+  { "position": 2, "subDomain": "Helium", "domain": "4.0026", "status": 1 },
+  { "position": 3, "subDomain": "Lithium", "domain": "6.941", "status": 1 },
+  { "position": 4, "subDomain": "Beryllium", "domain": "9.0122", "status": 1 },
+  { "position": 5, "subDomain": "Boron", "domain": "10.811", "status": 1 },
+  { "position": 6, "subDomain": "Carbon", "domain": "12.0107", "status": 1 },
+  { "position": 7, "subDomain": "Nitrogen", "domain": "14.0067", "status": 1 },
+  { "position": 8, "subDomain": "Oxygen", "domain": "15.9994", "status": 1 },
+  { "position": 9, "subDomain": "Fluorine", "domain": "18.9984", "status": 1 },
+  { "position": 10, "subDomain": "Neon", "domain": "20.1797", "status": 1 },
+  { "position": 11, "subDomain": "Boron", "domain": "10.811", "status": 1 },
+  { "position": 12, "subDomain": "Carbon", "domain": "12.0107", "status": 1 },
+  { "position": 13, "subDomain": "Nitrogen", "domain": "14.0067", "status": 1 },
+  { "position": 14, "subDomain": "Oxygen", "domain": "15.9994", "status": 1 },
+  { "position": 15, "subDomain": "Fluorine", "domain": "18.9984", "status": 1 },
+  { "position": 16, "subDomain": "Neon", "domain": "20.1797", "status": 1 }
+]

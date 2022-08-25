@@ -1,0 +1,12 @@
+<div class="tsd-popup">
+  <div class="tsd-popup__header">
+    <h1 mat-dialog-title>{{ data.title }}</h1>
+  </div>
+  <div mat-dialog-content>
+    <p class="tsd-popup__dialog-message">{{ data.message }}</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="cancel()">{{ data.cancelText }}</button>
+    <button mat-raised-button  (click)="confirm()">{{ data.confirmText }}</button>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="tsd-dashboards-table-wrapper">
+  <button mat-raised-button color="primary" (click)="addNewColumn()">Add Column</button>
+  <h2 class="tsd-dashboards-table__info">Account: {{dashboardName}}, Table: {{tableName}} </h2>
+  <table class="tsd-dashboards-table mat-elevation-z8" mat-table [dataSource]="dataColumnSource">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef class="tsd-dashboards-table__header"> No. </th>
+      <td mat-cell *matCellDef="let element; let i = index"> {{dataColumnSource.data.length - i}} </td>
+
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef class="tsd-dashboards-table__header"> Title
+      </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="type" >
+      <th mat-header-cell *matHeaderCellDef class="tsd-dashboards-table__header"> Type View
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{element.display_type}}
+
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="typeData" >
+      <th mat-header-cell *matHeaderCellDef class="tsd-dashboards-table__header"> Type Data
+      </th>
+      <td mat-cell *matCellDef="let element">
+        {{element.data_type}}
+      </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="actions" >
+      <th mat-header-cell *matHeaderCellDef class="tsd-dashboards-table__header"> Actions </th>
+      <td mat-cell *matCellDef="let element">
+        <div class="tsd-dashboards-table__actions">
+          <mat-icon class="tsd-dashboards-table__button" (click)="updateColumn(element)">create</mat-icon>
+          <mat-icon class="tsd-dashboards-table__button" (click)="deleteColumn(element)">delete</mat-icon>
+        </div>
+      </td>
+    </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedTableColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedTableColumns;"></tr>
+  </table>
+  <mat-paginator [length]="dataColumnSource?.data?.length"
+                 [pageSize]="10"
+                 [pageSizeOptions]="[5, 10, 25, 100]">
+  </mat-paginator>
+</div>

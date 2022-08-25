@@ -1,0 +1,53 @@
+<div class="tsd-dashboards-create">
+  <h1 class="tsd-dashboards-create__header">
+    Add Table (Account {{ dashboardName }})
+  </h1>
+  <h2 class="tsd-dashboards-create__info">Account: {{ dashboardName }}</h2>
+
+  <form
+    [formGroup]="formCreateTable"
+    class="tsd-dashboards-create__form"
+    (submit)="createTableSubmit($event)"
+  >
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input formControlName="title" matInput />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option value="true">active</mat-option>
+        <mat-option value="false">off</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Users List: write user and PRESS ENTER</mat-label>
+      <mat-chip-list #chipList aria-label="Fruit selection">
+        <mat-chip *ngFor="let user of userList" (removed)="removeUser(user)">
+          {{ user }}
+          <button matChipRemove>
+            <mat-icon>cancel</mat-icon>
+          </button>
+        </mat-chip>
+        <input
+          placeholder="New User..."
+          [matChipInputFor]="chipList"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          [matChipInputAddOnBlur]="addOnBlur"
+          (matChipInputTokenEnd)="addUser($event)"
+        />
+      </mat-chip-list>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="formCreateTable.invalid && !!userList.length"
+    >
+      Create
+    </button>
+  </form>
+</div>

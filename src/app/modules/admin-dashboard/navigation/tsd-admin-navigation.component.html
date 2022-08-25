@@ -1,0 +1,5 @@
+<div class="tsd-admin-navigation">
+  <div *ngFor="let route of routerTree; let i = index" class="tsd-admin-navigation__item" (click)="navigateToPath(i)">
+    {{route}} /
+  </div>
+</div>

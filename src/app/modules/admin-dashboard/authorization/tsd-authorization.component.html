@@ -1,0 +1,27 @@
+<div class="tsd-authorization">
+  <div class="tsd-authorization__inner">
+    <form class="tsd-authorization__form" (submit)="tryLogin($event)" [formGroup]="formAuth">
+      <mat-form-field>
+        <mat-label>Login</mat-label>
+        <input formControlName="login" matInput placeholder="Type login" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+          type="button"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <button mat-raised-button type="submit" [disabled]="formAuth.invalid">Login</button>
+    </form>
+  </div>
+</div>

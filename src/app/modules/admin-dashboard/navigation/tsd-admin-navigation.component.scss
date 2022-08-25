@@ -1,0 +1,14 @@
+@import "src/app/styles/styles";
+
+.tsd-admin-navigation {
+  display: flex;
+  margin-bottom: 24px;
+
+  &__item {
+    color: $color-gray-1;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+}

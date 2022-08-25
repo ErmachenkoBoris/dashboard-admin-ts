@@ -1,0 +1,14 @@
+<div class="tsd-alert" *ngIf="!close && (alertMessage$ | async)">
+  <div class="tsd-alert__text">
+    {{ alertMessage$ | async }}
+  </div>
+
+  <button
+    mat-icon-button
+    color="warn"
+    class="tsd-alert__button"
+    (click)="closeAlert()"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+</div>

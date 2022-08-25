@@ -1,0 +1,58 @@
+@import "src/app/styles/styles";
+
+.tsd-dashboards-table {
+
+  ::ng-deep {
+    .mat-form-field-wrapper{
+      margin-bottom: -1.25em;
+    }
+
+    .mat-form-field-appearance-standard .mat-form-field-flex {
+      padding-top: 0;
+    }
+  }
+
+  width: 100%;
+
+  margin-top: 16px;
+
+
+  &__header {
+    font-size: 20px;
+    color: $color-gray-1;
+  }
+
+  &__info {
+    font-size: 24px;
+    color: $color-gray-1;
+  }
+
+
+  &__actions {
+    color: $color-gray-1;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    cursor: pointer;
+    &:hover {
+      color: $color-gray-10;
+    }
+  }
+  &__filter {
+    display: flex;
+    font-size: 16px;
+    color: $color-gray-1;
+
+  }
+
+  &__users {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-users__item {
+    margin-right: 16px;
+  }
+}

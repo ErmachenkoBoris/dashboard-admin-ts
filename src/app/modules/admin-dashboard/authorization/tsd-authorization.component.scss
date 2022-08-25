@@ -1,0 +1,25 @@
+@import "src/app/styles/styles";
+
+.tsd-authorization {
+  width: 100%;
+  height: calc(100% - #{$admin-header-height});
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__inner {
+    border-radius: 20px;
+    border: 5px solid $color-gray-2;
+    padding: 20px;
+
+    min-width: 300px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 20px;
+  }
+}

@@ -1,0 +1,44 @@
+<div class="tsd-dashboards-create">
+  <h1 class="tsd-dashboards-create__header">Add Column </h1>
+  <h2 class="tsd-dashboards-create__info">Account: {{dashboardName}}, Table: {{tableName}} </h2>
+
+  <form [formGroup]="formCreateTable" class="tsd-dashboards-create__form" (submit)="createColumnSubmit($event)">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input formControlName="title" matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Data Type</mat-label>
+      <mat-select formControlName="typeData">
+        <mat-option value="dataType1">dataType1</mat-option>
+        <mat-option value="dataType2">dataType2</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>View Type</mat-label>
+      <mat-select formControlName="typeView">
+        <mat-option value="viewType1">viewType1</mat-option>
+        <mat-option value="viewType2">viewType2</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option value="true">active</mat-option>
+        <mat-option value="false">off</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Max value / Normal value</mat-label>
+      <input formControlName="maxNormValue" matInput>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="formCreateTable.invalid">Create</button>
+
+  </form>
+</div>
+

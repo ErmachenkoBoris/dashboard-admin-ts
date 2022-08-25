@@ -1,0 +1,22 @@
+{
+  "/api": {
+    "target": {
+      "host": "tsdashboard.ru",
+      "protocol": "https:",
+      "port": 443
+    },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info"
+  },
+  "/system": {
+    "target": {
+      "host": "tsdashboard.ru",
+      "protocol": "https:",
+      "port": 443
+    },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info"
+  }
+}

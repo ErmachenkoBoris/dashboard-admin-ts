@@ -1,0 +1,23 @@
+@import "src/app/styles/styles";
+
+.tsd-admin-header {
+
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: $color-gray-2;
+
+  height: 100%;
+
+  max-height: $admin-header-height;
+
+  padding: 0 13%;
+
+  &__name {
+    font-size: 20px;
+    color: $color-gray-1;
+    padding-left: 30px;
+  }
+}

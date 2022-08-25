@@ -1,0 +1,46 @@
+<div class="tsd-dashboards-create">
+  <h1 class="tsd-dashboards-create__header">Update Account</h1>
+  <h2 class="tsd-dashboards-create__info">Account: {{dashboardName}}</h2>
+
+  <form [formGroup]="formCreateAcc" class="tsd-dashboards-create__form" (submit)="updateDashboardSubmit($event)">
+    <mat-form-field>
+      <mat-label>SubDomain</mat-label>
+      <input formControlName="subDomain" matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Platform</mat-label>
+      <mat-select formControlName="platform" (selectionChange)="platformSelect($event)">
+        <mat-option [value]="enums.platform.amo">AmoCRM</mat-option>
+        <mat-option [value]="enums.platform.bitrix24">Birtix24</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="!bitrixPicked">
+      <mat-label>Client ID</mat-label>
+      <input formControlName="clientId" matInput>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="!bitrixPicked">
+      <mat-label>Secret Clients Key</mat-label>
+      <input formControlName="secretKey"  matInput>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="bitrixPicked">
+      <mat-label>Webhook</mat-label>
+      <input formControlName="webhook"  matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status">
+        <mat-option [value]="true">active</mat-option>
+        <mat-option [value]="false">off</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="formCreateAcc.invalid">Update</button>
+
+  </form>
+</div>
+
